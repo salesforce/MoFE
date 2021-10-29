@@ -1,0 +1,9 @@
+numpy==1.20.2
+torch==1.7.1
+nltk==3.6.4
+spacy==3.0.3
+transformers==4.6.1
+datasets==1.8.0
+sklearn==0.24.2
+tqdm==4.49.0
+pycorenlp

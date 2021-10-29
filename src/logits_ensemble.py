@@ -96,13 +96,6 @@ def parse_args():
         help='Paths for Experts separated by comma e.g. "Expert path 1,Expert path 2,..."',
     )
     parser.add_argument(
-        "--max_source_length",
-        type=int,
-        default=1024,
-        help="The maximum total input sequence length after "
-             "tokenization.Sequences longer than this will be truncated, sequences shorter will be padded.",
-    )
-    parser.add_argument(
         "--num_beams",
         type=int,
         default=6,
@@ -519,7 +512,7 @@ def main():
                              alpha=experts_model_alphas)
 
     def preprocess_function(examples):
-        model_inputs = common_tokenizer(examples["text"], max_length=args.max_source_length, padding=padding,
+        model_inputs = common_tokenizer(examples["text"], max_length=common_config.max_position_embeddings, padding=padding,
                                       truncation=True)
 
         # Setup the tokenizer for targets
