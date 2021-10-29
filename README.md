@@ -8,7 +8,7 @@
 Use the provided Dockerfile to build docker image.
 
 ## Running Code
-Download pre-trained [DAE evaluation models](https://github.com/tagoyal/factuality-datasets).
+Download pre-trained [DAE evaluation models](https://github.com/tagoyal/factuality-datasets). We used ```DAE_xsum_human_best_ckpt``` model for XSUM and ```ENT-C_dae``` for CNN_DM datasets.
 1. **Data Preparation:** Specify ```--metric``` as one of the ```dae/ner-p/ner-r```. Assuming ```train.source``` and ```train.target``` contain source articles and summaries, run:
     1. *Unfiltered* (used for model-based expert training)
         ```
