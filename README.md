@@ -73,7 +73,7 @@ Download pre-trained [DAE evaluation models](https://github.com/tagoyal/factuali
       --batch_size 16
     ```
    
-3. **Logits Ensembling:**
+4. **Logits Ensembling:**
    ```
    python new_logits_ensemble.py \
       --experts $OUTPUT_MODEL/xsum-bart-dae-model/,$OUTPUT_MODEL/xsum-bart-ner-p-model/,$OUTPUT_MODEL/xsum-bart-ner-r-model \
@@ -84,7 +84,16 @@ Download pre-trained [DAE evaluation models](https://github.com/tagoyal/factuali
       --per_device_eval_batch_size 3
    ```
 
-
+4. **Evaluations:**
+   1. For DAE, we used ```DAE_xsum_human_best_ckpt``` model for XSUM and ```ENT-C_dae``` for CNN_DM datasets. Check [DAE evaluation repo](https://github.com/tagoyal/factuality-datasets) for details.
+   2. For entity-based evaluations, use:   
+      ```
+      python evaluate_ner.py \
+         --source_doc $DATA_DIR/train.source \
+         --target_summary $DATA_DIR/train.target \
+         --predict_summary $OUTPUT_SUMMARY/weights_bart_xsum.txt
+      ```
+   3. For [FEQA](https://github.com/esdurmus/feqa), [BERTScore](https://github.com/Tiiiger/bert_score) and [QuestEval](https://github.com/ThomasScialom/QuestEval), please check the respective repositories.
 
 ## References
 This repo uses DAE factuality metric-based reward to train experts. We have included the relevant code from the [repo](https://github.com/tagoyal/factuality-datasets).
