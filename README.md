@@ -5,7 +5,9 @@
 **Authors:** Prafulla Kumar Choubey, Jesse Vig, Wenhao Liu, Nazneen Fatema Rajani
 
 ## Install dependencies
-Use the provided Dockerfile to build docker image.
+- Use the provided Dockerfile to build docker image. 
+- Alternatively, see *requirements.txt* (use ```pip install -r requirements.txt```).
+
 
 ## Running Code
 Download pre-trained [DAE evaluation models](https://github.com/tagoyal/factuality-datasets). We used ```DAE_xsum_human_best_ckpt``` model for XSUM and ```ENT-C_dae``` for CNN_DM datasets.
