@@ -91,8 +91,8 @@ Download pre-trained [DAE evaluation models](https://github.com/tagoyal/factuali
    2. For entity-based evaluations, use:   
       ```
       python evaluate_ner.py \
-         --source_doc $DATA_DIR/train.source \
-         --target_summary $DATA_DIR/train.target \
+         --source_doc $DATA_DIR/test.source \
+         --target_summary $DATA_DIR/test.target \
          --predict_summary $OUTPUT_SUMMARY/weights_bart_xsum.txt
       ```
    3. For [FEQA](https://github.com/esdurmus/feqa), [BERTScore](https://github.com/Tiiiger/bert_score) and [QuestEval](https://github.com/ThomasScialom/QuestEval), please check the respective repositories.
