@@ -78,7 +78,7 @@ def main():
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     config = AutoConfig.from_pretrained(model_dir)
 
-    raw_datasets = get_dataset(args.test_file)
+    raw_datasets = get_dataset(args.eval_data_path)
 
     tokenizer = AutoTokenizer.from_pretrained(model_dir)
     model = AutoModelForSeq2SeqLM.from_pretrained(model_dir)
