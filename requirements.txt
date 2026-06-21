@@ -1,4 +1,4 @@
-numpy==1.20.2
+numpy==1.22.0
 torch==1.7.1
 nltk==3.6.4
 spacy==3.0.3
